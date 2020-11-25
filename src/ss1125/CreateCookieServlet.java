@@ -8,21 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * 作者：LiuYunTao
- * 日期: 9:28 2020/11/25
- * 描述：
- */
-@WebServlet("/CreateCookieServlet")
+@WebServlet("/CreateCookieServlet1")
 public class CreateCookieServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //解决向网页输出消息(响应)中文乱码
-        resp.setContentType("text/html; charset=UTF-8");
-        //1.创建cookie对象
-        Cookie cookie=new Cookie("key1","value1");
-        //2.通知客户端保存cookie
-        resp.addCookie(cookie);
-        resp.getWriter().write("cookie创建成功！"+cookie.getName()+" "+cookie.getValue());
+        response.setContentType("text/html; charset=UTF-8");
+        //1.创建Cookie对象
+        Cookie cookie = new Cookie("key1", "value1");
+        //2.通知客户端保存Cookie
+        response.addCookie(cookie);
+        response.getWriter().write("Cookie创建成功！"+cookie.getName()+" "+cookie.getValue());
     }
 }
