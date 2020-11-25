@@ -35,7 +35,7 @@ public class FirstFangWen extends HttpServlet {
             resp.addCookie(cookie);
 
         }else {
-            resp.getWriter().write("恭喜您第一次访问本站！"+df.format(new Date()));
+            resp.getWriter().write("恭喜您第一次访问本站！");
             //1.创建cookie对象
             String time=df.format(new Date());
             cookie=new Cookie("key1",time);
