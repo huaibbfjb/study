@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="ss1125.CookieUtils" %><%--
   Created by IntelliJ IDEA.
   User: WuLiangHang
   Date: 2020/11/25
@@ -12,24 +14,41 @@
 </head>
 <body>
 <div>
-    <a href="/Day1119/day1125/GoodsServlet?name=toy"><img src="../img/day1125/toy.jpg"/> </a><br/>
+    <a href="/GoodsServlet?name=toy"><img src="./img/toy.jpg"/> </a><br/>
     <font>玩具车</font>
 </div>
 <div>
-    <a href="/Day1119/day1125/GoodsServlet?name=car"><img src="../img/day1125/car.jpg"/> </a><br/>
+    <a href="/GoodsServlet?name=car"><img src="./img/car.jpg"/> </a><br/>
     <font>兰博基尼</font>
 </div>
 <div>
-    <a href="/Day1119/day1125/GoodsServlet?name=grape"><img src="../img/day1125/grape.jpg"/> </a><br/>
+    <a href="/GoodsServlet?name=grape"><img src="./img/grape.jpg"/> </a><br/>
     <font>葡萄</font>
 </div>
 <div>
-    <a href="/Day1119/day1125/GoodsServlet?name=sausage"><img src="../img/day1125/sausage.jpg"/> </a><br/>
+    <a href="/GoodsServlet?name=sausage"><img src="./img/sausage.jpg"/> </a><br/>
     <font>香肠</font>
 </div>
 <div>
-    <a href="/Day1119/day1125/GoodsServlet?name=wash"><img src="../img/day1125/wash.jpg"/> </a><br/>
+    <a href="/GoodsServlet?name=wash"><img src="./img/wash.jpg"/> </a><br/>
     <font>香水</font>
 </div>
+<h3>
+    您浏览过的商品:
+</h3>
+<table>
+    <%
+        Cookie cookie2 = CookieUtils.findCookie("name2", request.getCookies());//取出key为某个值的cookie
+        if(cookie2!=null){
+            String [] strings=cookie2.getValue().split("&");
+            for (int i = 0; i < strings.length; i++) {
+    %>
+        <tr><td><%=strings[i]%></td></tr>
+    <%
+            }
+        }
+    %>
+</table>
+
 </body>
 </html>
