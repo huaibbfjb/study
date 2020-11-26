@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
-<%@ page import="ss1125.CookieUtils" %><%--
+<%@ page import="s1125.CookieUtils" %><%--
   Created by IntelliJ IDEA.
   User: WuLiangHang
   Date: 2020/11/25

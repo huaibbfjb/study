@@ -1,4 +1,4 @@
-package ss1124;
+package s1124;
 
 import java.util.List;
 import java.util.Map;

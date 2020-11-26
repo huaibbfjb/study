@@ -1,6 +1,4 @@
-package ss1125;
-
-import org.junit.Test;
+package s1125;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

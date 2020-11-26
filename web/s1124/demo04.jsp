@@ -2,7 +2,7 @@
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Map" %>
-<%@ page import="ss1124.Person" %>
+<%@ page import="s1124.Person" %>
 
 <%--
   Created by IntelliJ IDEA.

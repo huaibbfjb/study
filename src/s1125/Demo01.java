@@ -1,4 +1,4 @@
-package ss1125;
+package s1125;
 
 import org.junit.Test;
 

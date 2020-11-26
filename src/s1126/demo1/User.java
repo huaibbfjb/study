@@ -1,4 +1,4 @@
-package ss1125;
+package s1126.demo1;
 
 public class User {
     private String username;
