@@ -36,7 +36,7 @@ public class Demo01Servlet extends HttpServlet {
         Cookie[] cookies = request.getCookies();
         Cookie cookie1 = CookieUtils.findCookie("lastTime", cookies);
         String s = "您是首次访问本站！";
-        if (cookie1 != null){
+        if (cookie1 != null) {
             s = cookie1.getValue();
         }
         response.getWriter().print(s);

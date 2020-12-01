@@ -23,7 +23,7 @@ scope 属性 设置保存到哪个域
 var 属性设置 key 是多少
 value 设置属性值是多少
 --%>
-<c:set scope="session" var="abc" value="abcValue" />
+<c:set scope="session" var="abc" value="abcValue"/>
 保存之后:${sessionScope.abc}
 </body>
 </html>

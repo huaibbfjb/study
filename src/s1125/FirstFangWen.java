@@ -27,20 +27,20 @@ public class FirstFangWen extends HttpServlet {
 
         if (cookie != null) {
             System.out.println(df.format(new Date()));
-            resp.getWriter().write("您上一次访问本站:"+cookie.getValue());
+            resp.getWriter().write("您上一次访问本站:" + cookie.getValue());
             //创建新cookie
-            String time=df.format(new Date());
-            cookie=new Cookie("key1",time);
-            cookie.setMaxAge(60*60);
+            String time = df.format(new Date());
+            cookie = new Cookie("key1", time);
+            cookie.setMaxAge(60 * 60);
             resp.addCookie(cookie);
 
-        }else {
+        } else {
             resp.getWriter().write("恭喜您第一次访问本站！");
             //1.创建cookie对象
-            String time=df.format(new Date());
-            cookie=new Cookie("key1",time);
+            String time = df.format(new Date());
+            cookie = new Cookie("key1", time);
             //2.通知客户端保存cookie
-            cookie.setMaxAge(60*60);
+            cookie.setMaxAge(60 * 60);
             resp.addCookie(cookie);
             resp.getWriter().write("cookie创建成功！");
         }
@@ -48,6 +48,6 @@ public class FirstFangWen extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req,resp);
+        doGet(req, resp);
     }
 }

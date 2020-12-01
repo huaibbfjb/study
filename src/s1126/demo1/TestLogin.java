@@ -27,23 +27,23 @@ public class TestLogin extends HttpServlet {
         resp.setContentType("text/html;charset=utf-8");
         req.setCharacterEncoding("utf-8");
         //获取验证码
-        String token=(String) req.getSession().getAttribute(KAPTCHA_SESSION_KEY);
-        System.out.println("谷歌生成的验证码："+token);
+        String token = (String) req.getSession().getAttribute(KAPTCHA_SESSION_KEY);
+        System.out.println("谷歌生成的验证码：" + token);
 
-        String username=req.getParameter("username");
-        String password =req.getParameter("password");
-        String code=req.getParameter("code");
-        if(token!=null && token.equalsIgnoreCase(code)){
-            if("wnky".equals(username) && "123".equals(password)){
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        String code = req.getParameter("code");
+        if (token != null && token.equalsIgnoreCase(code)) {
+            if ("wnky".equals(username) && "123".equals(password)) {
                 //登录成功，获取session对象
-                User user=new User(username,password);
+                User user = new User(username, password);
                 // 得到session，如果已有session，得到该session，如果没有session，得到创建的新session
-                HttpSession session=req.getSession();
+                HttpSession session = req.getSession();
                 //System.out.println(session);
-                session.setAttribute("user",user);
+                session.setAttribute("user", user);
                 resp.sendRedirect("/s1126/index1.jsp");
             }
-        }else {
+        } else {
             resp.getWriter().print("验证码输入错误！");
         }
 

@@ -21,7 +21,7 @@ public class DeleteCookie extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Cookie cookie=new Cookie("name2",null);//删除名为name2的cookie
+        Cookie cookie = new Cookie("name2", null);//删除名为name2的cookie
         cookie.setMaxAge(0);//立刻删除
         cookie.setPath("/");//项目所有目录有效
         resp.addCookie(cookie);//重新写入，将覆盖之前的

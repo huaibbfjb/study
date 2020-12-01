@@ -20,10 +20,10 @@ public class CreateCookieServlet02 extends HttpServlet {
         //解决向网页输出消息(响应)中文乱码
         resp.setContentType("text/html; charset=UTF-8");
         //1.创建cookie对象
-        Cookie cookie=new Cookie("key2","value2");
+        Cookie cookie = new Cookie("key2", "value2");
         //2.通知客户端保存cookie
         resp.addCookie(cookie);
-        resp.getWriter().write("cookie创建成功！"+cookie.getName()+" "+cookie.getValue());
+        resp.getWriter().write("cookie创建成功！" + cookie.getName() + " " + cookie.getValue());
     }
 
     @Override
@@ -31,9 +31,9 @@ public class CreateCookieServlet02 extends HttpServlet {
         //解决向网页输出消息(响应)中文乱码
         resp.setContentType("text/html; charset=UTF-8");
         //1.创建cookie对象
-        Cookie cookie=new Cookie("key2","value2");
+        Cookie cookie = new Cookie("key2", "value2");
         //2.通知客户端保存cookie
         resp.addCookie(cookie);
-        resp.getWriter().write("cookie创建成功！"+cookie.getName()+" "+cookie.getValue());
+        resp.getWriter().write("cookie创建成功！" + cookie.getName() + " " + cookie.getValue());
     }
 }

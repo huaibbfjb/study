@@ -7,7 +7,7 @@ public class Person {
     private String name;
     private String[] phones;
     private List<String> cities;
-    private Map<String,Object> map;
+    private Map<String, Object> map;
 
     public Person() {
     }
