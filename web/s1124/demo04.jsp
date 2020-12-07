@@ -45,5 +45,15 @@
 输出Person的cities集合中某个元素值: ${p.cities[2]} <br/>
 输出Person的map集合: ${p.map} <br/>
 输出Person的map集合某个key的值: ${p.map.key2} <br/>
+——————————————————————————————————————————————————————<br>
+输出Person的phones属性(String数组)：${p.phones}<br>
+[Ljava.lang.String;@xxxxxxx的意义:<br>
+“[” 表示这是一维数组<br>
+"[["表示这是二维数组<br>
+"L"表示这是一个对象<br>
+"java.lang.String"表示该对象的类型<br>
+"@"后面的字符串表示该对象的HashCode<br>
+输出Person的cities集合(List)中元素值: ${p.cities} <br/>
+输出Person的cities集合中第一个个元素值: ${p.cities[0]} <br/>
 </body>
 </html>
